@@ -1,0 +1,15 @@
+iframe { border: none; }
+
+main {
+    width: 100%;
+    height: 100vh;
+
+    background-color: gray;
+}
+
+// 해상도
+.labtop iframe{
+    width: 2560px;
+    height: 1600px;
+    pointer-events: none;
+}

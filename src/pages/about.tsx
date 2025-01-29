@@ -5,10 +5,10 @@ import "@style/about.scss"
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
-    <main>
-        <h1 className="title">About Me</h1>
+    <div className="about_content">
+        <h1 className="about_title">About Me</h1>
         <p>HiHi</p>
-    </main>
+    </div>
   )
 }
 export const Head: HeadFC = () => <title>About Me</title>

@@ -5,8 +5,9 @@ import { Environment, MeshReflectorMaterial, OrbitControls, useGLTF } from "@rea
 import * as THREE from "three"
 import OfficeModel from "@components/office"
 import CityModel from "@components/city"
-import "@style/main.scss"
+import "@style/index.scss"
 import RoomModel from "@components/office2"
+import Macbook from "@components/macbook"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -15,12 +16,13 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <Canvas>
         <OrbitControls enableZoom enablePan enableRotate/>
-        {/* <axesHelper args={[5]} /> */}
+        <axesHelper args={[5]} />
 
-        <Environment files={"./images/background_city.hdr"} background/>
-        <ambientLight intensity={0.1}/>
-        <directionalLight position={[0, 1, -8]} intensity={0.4}/>
-        <directionalLight position={[1, 2, 8]} intensity={0.4}/>
+        {/* <Environment files={"./images/background_city.hdr"} background/> */}
+        <Environment preset="city"/>
+        {/* <ambientLight intensity={0.1}/> */}
+        {/* <directionalLight position={[0, 1, -8]} intensity={0.4}/> */}
+        {/* <directionalLight position={[1, 2, 8]} intensity={0.4}/> */}
 
         {/* <color attach="background" args={["#F0F0F0"]}/>
 
@@ -30,8 +32,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <meshStandardMaterial />
         </mesh> */}
         {/* <CityModel position={[0, -3, -10]}/> */}
-        <RoomModel />
+        {/* <RoomModel /> */}
         {/* <OfficeModel scale={[0.2, 0.2, 0.2]} position={[0, 0, 0]}/> */}
+        <Macbook />
       </Canvas>
     </main>
   )
